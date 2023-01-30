@@ -1,0 +1,98 @@
+.container{
+    min-height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-family: MV Boli;
+    background-image: url("https://images3.alphacoders.com/844/thumbbig-84405.webp");
+    background-size: cover;
+}
+
+.container h2{
+    color: antiquewhite;
+    border: .2rem solid antiquewhite;
+    border-radius: 1rem;
+    padding: 0 .5rem 0 .5rem;
+}
+
+.form_Img{
+    border: 2px solid rgba(0, 26, 255, 0.534);
+    width: 42rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: rgba(32, 128, 184, 0.425);
+    border-radius: 2rem;
+    font-weight: bolder;
+}
+
+.form_Img img{
+    width: 18rem;
+    height: 20.4rem;
+    border: 1px solid rgb(173, 173, 173);
+    margin-top: 2rem;
+}
+
+.form_Img form{
+    height: fit-content;
+    width: 19rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.form_Img div{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form_Img button{
+    width: 10rem;
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-right: -6rem;
+    font-family: MV Boli;
+    font-size: medium;
+    font-weight: bolder;
+    border-radius: 1rem;
+    border: .2rem solid rgb(129, 84, 1);
+
+}
+
+.form_Img input{
+    font-family: MV Boli;
+    font-size: medium;
+}
+
+.form_Img select{
+    font-family: MV Boli;
+    /* font-size: medium; */
+    font-weight: bolder;
+}
+
+.cards{
+    display: flex;
+    width: 90%;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    /* grid-auto-flow: column; */
+    padding: 2rem;
+    margin: auto;
+}
+
+.cards button{
+    width: fit-content;
+    border: .2rem solid rgb(129, 84, 1);
+    border-radius: 1rem;
+    font-family: MV Boli;
+    font-weight: bolder;
+    font-size:medium;
+}

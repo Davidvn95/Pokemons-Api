@@ -1,0 +1,31 @@
+.contentNav{
+    /* border: 1px solid green; */
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: rgb(17, 179, 3);
+    font-weight: bolder;
+    background-color: rgba(255, 228, 196, 0.678);
+    font-size: x-large;
+    font-family: MV Boli;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contentNav button{
+    border: .2rem solid rgb(129, 84, 1);
+    border-radius: 1rem;
+    font-family: MV Boli;
+    font-weight: bolder;
+    font-size:medium;
+}

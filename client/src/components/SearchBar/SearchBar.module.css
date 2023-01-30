@@ -1,0 +1,15 @@
+.search {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    height: fit-content;
+}
+
+.search input {
+    height: 1.2rem;
+    margin-top: 0.5rem;
+    font-family: MV Boli;
+    font-size: medium;
+    border: 0.15rem solid rgb(129, 84, 1);
+    border-radius: 0.5rem;
+}

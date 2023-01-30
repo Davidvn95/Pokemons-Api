@@ -1,0 +1,119 @@
+.container{
+    border: 1px solid blueviolet;
+    min-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-image: url("https://images3.alphacoders.com/844/thumbbig-84405.webp");
+    background-size: cover;
+    padding-bottom: 0;
+}
+
+.container button{
+    font-family: MV Boli;
+    font-size: medium;
+    font-weight: bolder;
+    border: .2rem solid rgb(129, 84, 1);
+    border-radius: 1rem;
+}
+
+
+.detail{
+    background-color: rgba(210, 231, 210, 0.877);
+    border: 1px solid green;
+    border-radius: 2rem;
+    width: 38rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.imgInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -1.5rem;
+}
+
+.divImg{
+    /* border: 1px solid black; */
+    width: 17rem;
+    height: 17.5rem;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+.divImg img{
+    position: absolute;
+    width: 16rem;
+    height: 17rem;
+}
+
+.info{
+    /* border: 1px solid blue; */
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    font-family: MV Boli;
+}
+
+.info div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.types{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: MV Boli;
+    font-weight: bolder;
+    margin-bottom: -.5rem;
+    color: rgb(117, 47, 47);
+    border-radius: 0 0 2rem 2rem;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    background-color: chartreuse
+}
+
+.ico{
+    width: 2rem;
+    height: 2rem;
+    margin-right: .5rem;
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-family: Pokemon Solid;
+    color: rgb(163, 106, 0);
+    /* color: gold; */
+    font-size: x-large;
+    margin-top: -1.3rem;
+    letter-spacing: .2rem;
+}
+
+.head h3{
+    margin: auto;
+    /* margin-right: 12.5rem; */
+}
+
+.loading{
+    /* border: 1px solid blueviolet; */
+    min-height: 31rem;
+    background-image: url("https://images3.alphacoders.com/844/thumbbig-84405.webp");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

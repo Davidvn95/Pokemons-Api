@@ -77,7 +77,7 @@
 
 .cards{
     display: flex;
-    width: 90%;
+    width: 100%;
     flex-direction: column-reverse;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -86,6 +86,9 @@
     /* grid-auto-flow: column; */
     padding: 2rem;
     margin: auto;
+    
+    background-image: url("https://images3.alphacoders.com/844/thumbbig-84405.webp");
+    background-size: cover;
 }
 
 .cards button{

@@ -1,16 +1,13 @@
 .cards{
-    /* background-color:aquamarine ; */
     display: flex;
     width: 90%;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 2rem;
-    grid-auto-flow: column;
     padding: 2rem;
     margin: auto;
 }
 .loading{
-    /* border: 1px solid blueviolet; */
     min-height: 31rem;
     background-image: url("https://images3.alphacoders.com/844/thumbbig-84405.webp");
     background-size: cover;

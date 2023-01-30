@@ -45,7 +45,6 @@
 }
 
 .form_Img div{
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -61,7 +60,6 @@
     font-weight: bolder;
     border-radius: 1rem;
     border: .2rem solid rgb(129, 84, 1);
-
 }
 
 .form_Img input{
@@ -71,7 +69,6 @@
 
 .form_Img select{
     font-family: MV Boli;
-    /* font-size: medium; */
     font-weight: bolder;
 }
 
@@ -83,10 +80,8 @@
     justify-content: space-around;
     align-items: center;
     gap: 2rem;
-    /* grid-auto-flow: column; */
     padding: 2rem;
     margin: auto;
-    
     background-image: url("https://images3.alphacoders.com/844/thumbbig-84405.webp");
     background-size: cover;
 }

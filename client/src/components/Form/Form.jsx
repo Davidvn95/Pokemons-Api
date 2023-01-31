@@ -69,7 +69,9 @@ const Form = () => {
             dispatch(createPokemon(body));
             dispatch(getAllPokemons());
             dispatch(getAllTypes());
-        } else alert("Name and Type are required");
+        } else if (newPokemon.name?.length > 10) {
+            alert("length name's must be less 10")
+        }else alert("Name and Type are required");
     };
 
     return created.id ? (

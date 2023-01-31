@@ -155,7 +155,7 @@ const Form = () => {
                     <div>
                         <label htmlFor="type">Type: </label>
                         <select name="type" onChange={handleForm}>
-                            <option disabled>Select a type</option>
+                            <option >Select a type</option>
                             {types.map((typ, index) => (
                                 <option key={index}>{typ.name}</option>
                             ))}

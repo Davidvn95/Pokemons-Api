@@ -1,4 +1,4 @@
-.container{
+.container {
     min-height: 25rem;
     display: flex;
     flex-direction: column;
@@ -10,14 +10,14 @@
     background-size: cover;
 }
 
-.container h2{
+.container h2 {
     color: antiquewhite;
-    border: .2rem solid antiquewhite;
+    border: 0.2rem solid antiquewhite;
     border-radius: 1rem;
-    padding: 0 .5rem 0 .5rem;
+    padding: 0 0.5rem 0 0.5rem;
 }
 
-.form_Img{
+.form_Img {
     border: 2px solid rgba(0, 26, 255, 0.534);
     width: 42rem;
     display: flex;
@@ -29,28 +29,28 @@
     font-weight: bolder;
 }
 
-.form_Img img{
+.form_Img img {
     width: 18rem;
     height: 20.4rem;
     border: 1px solid rgb(173, 173, 173);
     margin-top: 2rem;
 }
 
-.form_Img form{
+.form_Img form {
     height: fit-content;
     width: 19rem;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 0.5rem;
 }
 
-.form_Img div{
+.info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.form_Img button{
+.form_Img button {
     width: 10rem;
     margin: auto;
     margin-top: 1.5rem;
@@ -59,20 +59,20 @@
     font-size: medium;
     font-weight: bolder;
     border-radius: 1rem;
-    border: .2rem solid rgb(129, 84, 1);
+    border: 0.2rem solid rgb(129, 84, 1);
 }
 
-.form_Img input{
+.form_Img input {
     font-family: MV Boli;
     font-size: medium;
 }
 
-.form_Img select{
+.form_Img select {
     font-family: MV Boli;
     font-weight: bolder;
 }
 
-.cards{
+.cards {
     display: flex;
     width: 100%;
     flex-direction: column-reverse;
@@ -86,11 +86,24 @@
     background-size: cover;
 }
 
-.cards button{
+.cards button {
     width: fit-content;
-    border: .2rem solid rgb(129, 84, 1);
+    border: 0.2rem solid rgb(129, 84, 1);
     border-radius: 1rem;
     font-family: MV Boli;
     font-weight: bolder;
-    font-size:medium;
+    font-size: medium;
+}
+
+.errorName {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.errorName span {
+    color: brown;
+    font-family: MV Boli;
+    font-weight: bold;
+    font-size: medium;
 }

@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { cleanForm, createPokemon, getAllPokemons, getAllTypes } from "../../redux/actions/actions";
+import {
+    cleanForm,
+    createPokemon,
+    getAllPokemons,
+    getAllTypes,
+} from "../../redux/actions/actions";
 import Card from "../Card/Card";
 import styles from "./Form.module.css";
 
 const Form = () => {
-    const created = useSelector(state => state.created);
+    const created = useSelector((state) => state.created);
     const types = useSelector((state) => state.types);
     const dispatch = useDispatch();
 
@@ -21,9 +26,9 @@ const Form = () => {
         type: [],
     });
 
-    const cleaningForm = ()=>{
-        dispatch(cleanForm())
-    }
+    const cleaningForm = () => {
+        dispatch(cleanForm());
+    };
 
     const handleForm = (event) => {
         const property = event.target.name;
@@ -52,14 +57,18 @@ const Form = () => {
 
     const submitFunction = (event) => {
         event.preventDefault();
-        if (newPokemon.name?.length && newPokemon.type?.length) {
+        if (
+            newPokemon.name?.length > 0 &&
+            newPokemon.name?.length <= 10 &&
+            newPokemon.type?.length
+        ) {
             const body = {};
             for (const prop in newPokemon) {
-                if(newPokemon[prop] !== "")body[prop] = newPokemon[prop];
+                if (newPokemon[prop] !== "") body[prop] = newPokemon[prop];
             }
             dispatch(createPokemon(body));
             dispatch(getAllPokemons());
-            dispatch(getAllTypes())
+            dispatch(getAllTypes());
         } else alert("Name and Type are required");
     };
 
@@ -78,71 +87,83 @@ const Form = () => {
             <h2>Creation form</h2>
             <div className={styles.form_Img}>
                 <form>
-                    <div>
-                        <label htmlFor="name">Name: </label>
-                        <input
-                            type="text"
-                            name="name"
-                            onChange={handleForm}
-                            value={newPokemon.name}
-                            autoComplete="off"
-                        />
+                    <div className={styles.info}>
+                        <label htmlFor="name">Name*: </label>
+                        <div className={styles.errorName}>
+                            <input
+                                type="text"
+                                name="name"
+                                onChange={handleForm}
+                                value={newPokemon.name}
+                                placeholder="Enter a Name"
+                                autoComplete="off"
+                            />
+                            {newPokemon.name?.length > 10 && (
+                                <span>*Enter 10 characters or less*</span>
+                            )}
+                        </div>
                     </div>
-                    <div>
+                    <div className={styles.info}>
                         <label htmlFor="life">Life: </label>
                         <input
                             type="number"
                             name="life"
                             onChange={handleForm}
                             value={newPokemon.life}
+                            placeholder="Deafult 1"
                         />
                     </div>
-                    <div>
+                    <div className={styles.info}>
                         <label htmlFor="attack">Attack: </label>
                         <input
                             type="number"
                             name="attack"
                             onChange={handleForm}
                             value={newPokemon.attack}
+                            placeholder="Default 1"
                         />
                     </div>
-                    <div>
+                    <div className={styles.info}>
                         <label htmlFor="defense">Defense: </label>
                         <input
                             type="number"
                             name="defense"
                             onChange={handleForm}
                             value={newPokemon.defense}
+                            placeholder="Default 1"
                         />
                     </div>
-                    <div>
+                    <div className={styles.info}>
                         <label htmlFor="speed">Speed: </label>
                         <input
                             type="number"
                             name="speed"
                             onChange={handleForm}
                             value={newPokemon.speed}
+                            placeholder="Default 1"
                         />
                     </div>
-                    <div>
+                    <div className={styles.info}>
                         <label htmlFor="weight">Weight: </label>
                         <input
                             type="number"
                             name="weight"
                             onChange={handleForm}
                             value={newPokemon.weight}
+                            placeholder="Default 1"
                         />
                     </div>
-                    <div>
+                    <div className={styles.info}>
                         <label htmlFor="height">Height: </label>
                         <input
                             type="number"
                             name="height"
                             onChange={handleForm}
                             value={newPokemon.height}
+                            placeholder="Default 1"
                         />
                     </div>
-                    <div>
+                    <div className={styles.info}>
                         <label htmlFor="image">Image: </label>
                         <input
                             type="text"
@@ -152,16 +173,16 @@ const Form = () => {
                             placeholder="Enter a URL"
                         />
                     </div>
-                    <div>
-                        <label htmlFor="type">Type: </label>
+                    <div className={styles.info}>
+                        <label htmlFor="type">Type*: </label>
                         <select name="type" onChange={handleForm}>
-                            <option >Select a type</option>
+                            <option>Select a type</option>
                             {types.map((typ, index) => (
                                 <option key={index}>{typ.name}</option>
                             ))}
                         </select>
                     </div>
-                    <div>
+                    <div className={styles.info}>
                         <label htmlFor="type2">Type2 (optinal): </label>
                         <select name="type2" onChange={handleForm}>
                             <option value="null">Select a type</option>

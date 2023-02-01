@@ -42,7 +42,6 @@ module.exports = (sequelize) => {
             },
             image: {
                 type: DataTypes.STRING,
-                defaultValue: "https://i.ibb.co/zPfjMYc/Pokemon-desconocido.jpg",
             },
         },
         { timestamps: false }

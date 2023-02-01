@@ -86,6 +86,12 @@
     background-size: cover;
 }
 
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
 .cards button {
     width: fit-content;
     border: 0.2rem solid rgb(129, 84, 1);

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import {
-    cleanForm,
     createPokemon,
     getAllPokemons,
     getAllTypes,
+    separateLocations,
 } from "../../redux/actions/actions";
 import Card from "../Card/Card";
 import styles from "./Form.module.css";
@@ -26,8 +27,9 @@ const Form = () => {
         type: [],
     });
 
-    const cleaningForm = () => {
-        dispatch(cleanForm());
+
+    const toBack = () => {
+        dispatch(separateLocations());
     };
 
     const handleForm = (event) => {
@@ -70,8 +72,8 @@ const Form = () => {
             dispatch(getAllPokemons());
             dispatch(getAllTypes());
         } else if (newPokemon.name?.length > 10) {
-            alert("length name's must be less 10")
-        }else alert("Name and Type are required");
+            alert("length name's must be less 10");
+        } else alert("Name and Type are required");
     };
 
     return created.id ? (
@@ -82,7 +84,12 @@ const Form = () => {
                 image={created.image}
                 type={created.type ? created.type : created.types}
             />
-            <button onClick={cleaningForm}>New</button>
+            <div className={styles.buttons}>
+                <Link to="/home">
+                    <button onClick={toBack}>Back</button>
+                </Link>
+                <button onClick={toBack}>New</button>
+            </div>
         </div>
     ) : (
         <div className={styles.container}>
@@ -197,7 +204,8 @@ const Form = () => {
                 </form>
                 <img
                     src={
-                        newPokemon.image || "https://i.ibb.co/zPfjMYc/Pokemon-desconocido.jpg"
+                        newPokemon.image ||
+                        "https://i.postimg.cc/Bb6Vrv5R/Pokemon-desconocido.jpg"
                     }
                     alt="Created"
                 />

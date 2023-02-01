@@ -192,7 +192,7 @@ const Form = () => {
                         </select>
                     </div>
                     <div className={styles.info}>
-                        <label htmlFor="type2">Type2 (optinal): </label>
+                        <label htmlFor="type2">Type2 (optional): </label>
                         <select name="type2" onChange={handleForm}>
                             <option value="null">Select a type</option>
                             {types.map((typ, index) => (

@@ -6,7 +6,7 @@ const getTypes = async () => {
     if (types.length) return types;
     else {
         const response = await axios.get("https://pokeapi.co/api/v2/type");
-        Type.bulkCreate(response.data?.results);
+        await Type.bulkCreate(response.data?.results);
         return response.data?.results;
     }
 };

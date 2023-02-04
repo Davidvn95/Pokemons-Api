@@ -11,6 +11,7 @@ import Card from "../Card/Card";
 import styles from "./Form.module.css";
 
 const Form = () => {
+    const db = useSelector(state => state.db);
     const created = useSelector((state) => state.created);
     const types = useSelector((state) => state.types);
     const dispatch = useDispatch();
@@ -61,6 +62,11 @@ const Form = () => {
     const submitFunction = (event) => {
         event.preventDefault();
         if (regexName.test(newPokemon.name) && newPokemon.type?.length) {
+            for (const element of db) {
+                if (element.name === newPokemon.name) {
+                    return alert("El pokemon o nombre ya existe");
+                }
+            }
             const body = {};
             for (const prop in newPokemon) {
                 if (newPokemon[prop] !== "") body[prop] = newPokemon[prop];

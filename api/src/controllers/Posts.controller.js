@@ -24,7 +24,7 @@ const createPokemon = async (
             image,
         });
         const myType = await Type.findAll({ where: { name: type } });
-        newPokemon.addType(myType);
+        await newPokemon.addType(myType);
         const typesReturn = myType.map((element) => element.dataValues?.name);
 
         return {

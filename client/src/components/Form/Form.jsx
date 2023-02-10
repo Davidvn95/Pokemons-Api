@@ -28,7 +28,7 @@ const Form = () => {
         type: [],
     });
 
-    const regexName = /^[a-zA-ZÀ-ÿ]{4,10}$/;
+    const regexName = /^[a-zA-ZÀ-ÿ]{4,12}$/;
 
     const toBack = () => {
         dispatch(separateLocations());
@@ -63,7 +63,7 @@ const Form = () => {
         event.preventDefault();
         if (regexName.test(newPokemon.name) && newPokemon.type?.length) {
             for (const element of db) {
-                if (element.name === newPokemon.name) {
+                if (element.name?.toLowerCase() === newPokemon.name?.toLowerCase()) {
                     return alert("El pokemon o nombre ya existe");
                 }
             }
@@ -110,7 +110,7 @@ const Form = () => {
                             />
                             {newPokemon.name !== "" && !regexName.test(newPokemon.name) && (
                                 <span>
-                                    *Name must be between 4 and 10 characters and not include
+                                    *Name must be between 4 and 12 characters and not include
                                     numbers, spaces or special characters*
                                 </span>
                             )}
